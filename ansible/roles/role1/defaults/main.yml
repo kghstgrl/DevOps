@@ -1,0 +1,10 @@
+---
+app_dir: /opt/app
+app_version: v2.0
+app_branch: main
+devops_branch: main
+
+docker_packages:
+  - git
+  - docker.io
+  - docker-compose-v2

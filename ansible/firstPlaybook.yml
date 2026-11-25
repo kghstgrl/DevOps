@@ -1,0 +1,6 @@
+---
+- name: Deploy microservices
+  hosts: app
+  become: true
+  roles:
+    - role1

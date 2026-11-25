@@ -1,0 +1,11 @@
+---
+- name: Check Docker Compose file
+  ansible.builtin.stat:
+    path: "{{ app_dir }}/DevOps/docker-compose.yml"
+  register: compose_file
+
+- name: Stop microservices
+  ansible.builtin.command:
+    cmd: docker compose down
+    chdir: "{{ app_dir }}/DevOps"
+  when: compose_file.stat.exists
